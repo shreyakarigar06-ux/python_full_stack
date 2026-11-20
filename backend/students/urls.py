@@ -1,5 +1,13 @@
 from django.urls import path
 from . import views
 urlpatterns=[
-    path('',views.home, name='home'),
+    path("",views.login_page,name='login'),
+    path("dashboard/",views.dashboard,name='dashboard'),
+    path("/",views.logout_page,name='logout'),
+
+    path('student-form/',
+         views.student_form,name='student_form'),
+    path('students/',
+          views.student_list, 
+          name='student_list'),
 ]
